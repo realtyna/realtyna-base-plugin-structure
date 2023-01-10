@@ -1,0 +1,11 @@
+pipelines:
+  default:
+    - step:
+        name: Sync GitHub Mirror
+        image: alpine/git:latest
+        clone:
+          enabled: false
+        script:
+          - git clone --bare git@bitbucket.org:realtyna/realtyna-base-plugin-structure.git
+          - cd realtyna-base-plugin-structure.git
+          - git push --mirror git@github.com:realtynapublic/Realtyna-Base-Structure.git

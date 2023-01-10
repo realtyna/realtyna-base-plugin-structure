@@ -1,0 +1,37 @@
+{
+  "name": "realtyna/plugin-structure",
+  "description": "Base structure of realtyna MVC plugin",
+  "type": "library",
+  "license": "LGPL-3.0-or-later",
+  "autoload": {
+    "psr-4": {
+      "Realtyna\\MustRename\\": "app/"
+    },
+    "files" : [
+      "./app/Boot/helper.php"
+    ]
+  },
+  "authors": [
+    {
+      "name": "Realtyna",
+      "email": "info@realtyna.net"
+    },
+    {
+      "name": "Chandler P",
+      "email": "chandler.p@realtyna.net"
+    }
+  ],
+  "require": {
+    "php": ">=7.4",
+    "robmorgan/phinx": "^0.13.4",
+    "psr/container": "^1.0",
+    "jenssegers/blade": "*",
+    "illuminate/database": "^8.83",
+    "firebase/php-jwt": "^6.3",
+    "realtyna/mvc-core": "^0.0.4"
+  },
+  "require-dev": {
+    "symfony/var-dumper": "^v5.4.0",
+    "yoast/phpunit-polyfills": "^1.0"
+  }
+}
