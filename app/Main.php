@@ -60,13 +60,13 @@ class Main extends StartUp
             require_once(ABSPATH . 'wp-admin/includes/plugin.php');
         }
 
-        $currentPluginVersion = get_plugin_data($this->config->get('path.plugin-base-file-path'))['Version'];
+        $currentPluginVersion = get_plugin_data($this->config->get('path.plugin-file-path'))['Version'];
         $lastRegisteredPluginVersion = get_option('realtyna_must_rename_version');
 
         if ($currentPluginVersion != $lastRegisteredPluginVersion) {
             $this->phinx->migrate();
             $this->phinx->seed();
-            update_option('realtyna_home_valuation_version', $currentPluginVersion);
+            update_option('realtyna_must_rename_version', $currentPluginVersion);
         }
     }
 }
