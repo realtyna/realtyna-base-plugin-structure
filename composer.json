@@ -28,7 +28,7 @@
     "jenssegers/blade": "*",
     "illuminate/database": "^8.83",
     "firebase/php-jwt": "^6.3",
-    "realtyna/mvc-core": "^0.0.4"
+    "realtyna/mvc-core": "*"
   },
   "require-dev": {
     "symfony/var-dumper": "^v5.4.0",

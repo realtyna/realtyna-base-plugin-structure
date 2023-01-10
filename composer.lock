@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fc053386564b5f2c703c306194d516b8",
+    "content-hash": "3c12460583b14a9742bd47e151f5059d",
     "packages": [
         {
             "name": "cakephp/core",
@@ -1311,16 +1311,16 @@
         },
         {
             "name": "realtyna/mvc-core",
-            "version": "0.0.4",
+            "version": "0.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/realtynapublic/Realtyna-MVC-Core.git",
-                "reference": "7ef8a4b15fb65eac4121d8feba24277e2056792c"
+                "reference": "48f59cf543ab12cd1621a8b29f554338319873ff"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/realtynapublic/Realtyna-MVC-Core/zipball/7ef8a4b15fb65eac4121d8feba24277e2056792c",
-                "reference": "7ef8a4b15fb65eac4121d8feba24277e2056792c",
+                "url": "https://api.github.com/repos/realtynapublic/Realtyna-MVC-Core/zipball/48f59cf543ab12cd1621a8b29f554338319873ff",
+                "reference": "48f59cf543ab12cd1621a8b29f554338319873ff",
                 "shasum": ""
             },
             "require": {
@@ -1350,20 +1350,20 @@
                     "email": "info@realtyna.net"
                 },
                 {
-                    "name": "Anton E",
-                    "email": "anton.e@realtyna.com"
-                },
-                {
                     "name": "Chandler P",
                     "email": "chandler.p@realtyna.net"
+                },
+                {
+                    "name": "Anton E",
+                    "email": "anton.e@realtyna.com"
                 }
             ],
             "description": "Core library to create WordPress plugin in MVC design pattern",
             "support": {
                 "issues": "https://github.com/realtynapublic/Realtyna-MVC-Core/issues",
-                "source": "https://github.com/realtynapublic/Realtyna-MVC-Core/tree/0.0.4"
+                "source": "https://github.com/realtynapublic/Realtyna-MVC-Core/tree/0.0.6"
             },
-            "time": "2023-01-10T13:35:36+00:00"
+            "time": "2023-01-10T15:16:07+00:00"
         },
         {
             "name": "robmorgan/phinx",
@@ -4700,7 +4700,9 @@
     "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": [],
+    "platform": {
+        "php": ">=7.4"
+    },
     "platform-dev": [],
     "plugin-api-version": "2.3.0"
 }
