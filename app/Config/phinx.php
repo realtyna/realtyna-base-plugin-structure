@@ -10,7 +10,7 @@ return
         ],
         'environments' => [
             'default_migration_table' => 'phinxlog',
-            'default_environment' => 'development',
+            'default_environment' => 'production',
             'production' => [
                 'adapter' => 'mysql',
                 'host' => DB_HOST,
