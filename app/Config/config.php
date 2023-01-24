@@ -11,7 +11,7 @@ return [
         'name' => 'must_rename'
     ],
     'api' => [
-        'namespace' => 'must-rename'
+        'namespace' => 'wpl'
     ],
     'path' => [
         'plugin-file-path'  => REALTYNA_MUST_RENAME_BASE_PATH . 'plugin.php',
