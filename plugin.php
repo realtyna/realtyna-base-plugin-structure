@@ -17,9 +17,13 @@ use Realtyna\MvcCore\Config;
 
 require_once(__DIR__ . '/vendor/autoload.php');
 
+define('REALTYNA_MUST_RENAME_BASE_PATH', plugin_dir_path(__FILE__));
+
 $config = include(plugin_dir_path(__FILE__) . '/app/Config/config.php');
 $config = new Config($config);
-$main   = new \Realtyna\MustRename\Main($config);
+$pluginName = $config->get('plugin.name');
+global $$pluginName;
+$$pluginName   = new \Realtyna\MustRename\Main($config);
 
 register_activation_hook(__FILE__, [$main, 'activation']);
 register_deactivation_hook(__FILE__, [$main, 'deactivation']);

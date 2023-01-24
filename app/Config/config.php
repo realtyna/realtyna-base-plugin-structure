@@ -7,21 +7,24 @@ return [
 
     'namespace' => 'MustRename',
     'version' => '1.0.0',
+    'plugin'  => [
+        'name' => 'must_rename'
+    ],
     'api' => [
         'namespace' => 'must-rename'
     ],
     'path' => [
-        'plugin-file-path'  => __DIR__ . '/../../plugin.php',
-        'validator-messages' => __DIR__ . '/../../assets/langs/validation.php',
+        'plugin-file-path'  => REALTYNA_MUST_RENAME_BASE_PATH . 'plugin.php',
+        'validator-messages' => REALTYNA_MUST_RENAME_BASE_PATH . 'assets/langs/validation.php',
         'phinx' => [
-            'conf'  => __DIR__ . '/phinx.php'
+            'conf'  => REALTYNA_MUST_RENAME_BASE_PATH . 'app/Config/phinx.php'
         ],
         'assets' => [
-            'css' => plugin_dir_url(__DIR__ . '/../../plugin.php') . '/assets/css',
-            'js' => plugin_dir_url(__DIR__ . '/../../plugin.php') . '/assets/js',
+            'css' => plugin_dir_url(REALTYNA_MUST_RENAME_BASE_PATH . 'plugin.php') . '/assets/css',
+            'js' => plugin_dir_url(REALTYNA_MUST_RENAME_BASE_PATH . 'plugin.php') . '/assets/js',
         ],
-        'plugin_dir' => __DIR__ . '/../../',
-        'view' => __DIR__ . '/../../templates',
+        'plugin_dir' => REALTYNA_MUST_RENAME_BASE_PATH,
+        'view' => REALTYNA_MUST_RENAME_BASE_PATH . 'templates',
     ],
     'jwt_secret' => REALTYNA_JWT_SECRET,
 ];
