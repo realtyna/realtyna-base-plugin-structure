@@ -25,8 +25,8 @@ $pluginName = $config->get('plugin.name');
 global $$pluginName;
 $$pluginName   = new \Realtyna\MustRename\Main($config);
 
-register_activation_hook(__FILE__, [$main, 'activation']);
-register_deactivation_hook(__FILE__, [$main, 'deactivation']);
-register_uninstall_hook(__FILE__, [$main, 'uninstallation']);
+register_activation_hook(__FILE__, [$$pluginName, 'activation']);
+register_deactivation_hook(__FILE__, [$$pluginName, 'deactivation']);
+register_uninstall_hook(__FILE__, [$$pluginName, 'uninstallation']);
 
 

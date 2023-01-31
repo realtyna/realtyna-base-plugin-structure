@@ -2,6 +2,7 @@
 
 namespace Realtyna\MustRename;
 
+use Realtyna\MvcCore\Phinx;
 use Realtyna\MvcCore\StartUp;
 
 class Main extends StartUp
@@ -29,8 +30,8 @@ class Main extends StartUp
 
     public function activation()
     {
-        $this->phinx->migrate();
-        $this->phinx->seed();
+        $this->container->get(Phinx::class)->migrate();
+        $this->container->get(Phinx::class)->seed();
         $pluginVersion = get_plugin_data($this->config->get('path.plugin-file-path'))['Version'];
         update_option('realtyna_must_rename_version', $pluginVersion);
 
@@ -48,7 +49,7 @@ class Main extends StartUp
 
     public function uninstallation()
     {
-        $this->phinx->rollback();
+        $this->container->get(Phinx::class)->rollback();
 
         //Custom uninstallation START
         //Custom uninstallation END
@@ -64,8 +65,8 @@ class Main extends StartUp
         $lastRegisteredPluginVersion = get_option('realtyna_must_rename_version');
 
         if ($currentPluginVersion != $lastRegisteredPluginVersion) {
-            $this->phinx->migrate();
-            $this->phinx->seed();
+            $this->container->get(Phinx::class)->migrate();
+            $this->container->get(Phinx::class)->seed();
             update_option('realtyna_must_rename_version', $currentPluginVersion);
         }
     }
