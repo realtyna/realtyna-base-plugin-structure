@@ -2,6 +2,7 @@
 
 namespace Realtyna\MustRename;
 
+use Realtyna\MustRename\Settings\Setting;
 use Realtyna\MvcCore\Phinx;
 use Realtyna\MvcCore\StartUp;
 
@@ -26,6 +27,11 @@ class Main extends StartUp
     public function api()
     {
         // TODO: Implement api() method.
+    }
+
+    public function settings()
+    {
+        $this->addSetting(Setting::class);
     }
 
     public function activation()

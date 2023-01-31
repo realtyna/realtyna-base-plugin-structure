@@ -2125,16 +2125,16 @@
         },
         {
             "name": "realtyna/mvc-core",
-            "version": "0.2.2",
+            "version": "0.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/realtyna/Realtyna-MVC-Core.git",
-                "reference": "72eb62b395edc805007e21d7987657a6154a92b1"
+                "reference": "afff4ad2f6020985bbcb6d5d72d63d2fc7cb62b2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/realtyna/Realtyna-MVC-Core/zipball/72eb62b395edc805007e21d7987657a6154a92b1",
-                "reference": "72eb62b395edc805007e21d7987657a6154a92b1",
+                "url": "https://api.github.com/repos/realtyna/Realtyna-MVC-Core/zipball/afff4ad2f6020985bbcb6d5d72d63d2fc7cb62b2",
+                "reference": "afff4ad2f6020985bbcb6d5d72d63d2fc7cb62b2",
                 "shasum": ""
             },
             "require": {
@@ -2182,9 +2182,9 @@
             "description": "Core library to create WordPress plugin in MVC design pattern",
             "support": {
                 "issues": "https://github.com/realtyna/Realtyna-MVC-Core/issues",
-                "source": "https://github.com/realtyna/Realtyna-MVC-Core/tree/0.2.2"
+                "source": "https://github.com/realtyna/Realtyna-MVC-Core/tree/0.2.4"
             },
-            "time": "2023-01-30T19:27:59+00:00"
+            "time": "2023-01-31T14:12:55+00:00"
         },
         {
             "name": "robmorgan/phinx",
