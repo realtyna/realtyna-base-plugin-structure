@@ -37,7 +37,7 @@ class Main extends StartUp
 	public function requirements(): bool
 	{
 		$valid = true;
-		if ( is_plugin_active( 'realtyna-API/plugin.php' ) ) {
+		if ( !is_plugin_active( 'realtyna-API/plugin.php' ) ) {
 			$this->addNotice('<p><strong>Realtyna API plugin</strong> is not activated. you need to install and activate it.</p>');
 			$valid = false;
 		}
