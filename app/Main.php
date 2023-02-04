@@ -34,6 +34,15 @@ class Main extends StartUp
         $this->addSetting(Setting::class);
     }
 
+	public function requirements(): bool
+	{
+		if(true){
+//		    $this->addNotice('Just a notice test');
+//			return false;
+		}
+		return true;
+	}
+
     public function activation()
     {
         $this->container->get(Phinx::class)->migrate();
