@@ -13,6 +13,16 @@ Domain Path: /assets/langs
 Requires PHP: 7.4
 */
 
+if(!class_exists('Realtyna\MvcCore\StartUp')){
+	add_action('admin_notices', function (){
+		echo  '<div class="notice notice-error">';
+		echo '<p>Realtyna API is not installed</p>';
+		echo  '</div>';
+	});
+	return ;
+}
+
+
 use Realtyna\MvcCore\Config;
 
 require_once(__DIR__ . '/vendor/autoload.php');
