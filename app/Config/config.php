@@ -27,4 +27,7 @@ return [
         'view' => REALTYNA_MUST_RENAME_BASE_PATH . 'templates',
     ],
     'jwt_secret' => REALTYNA_JWT_SECRET,
+    'license'    => [
+	    'product_id' => 194915
+    ]
 ];
