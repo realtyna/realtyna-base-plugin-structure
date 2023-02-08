@@ -13,6 +13,16 @@ Domain Path: /assets/langs
 Requires PHP: 7.4
 */
 
+if(file_exists(plugin_dir_path(__FILE__) . '../realtyna-API/vendor/autoload.php')){
+	require_once plugin_dir_path(__FILE__) . '../realtyna-API/vendor/autoload.php';
+}else{
+	add_action('admin_notices', function (){
+		echo  '<div class="notice notice-error">';
+		echo '<p>Realtyna API is not installed.</p>';
+		echo  '</div>';
+	});
+}
+
 if (!defined('REALTYNA_JWT_SECRET')) {
 	$html = '<div class="notice notice-error"><p>
                     <strong>REALTYNA_JWT_SECRET</strong> is not defined in <strong>wp-config.php</strong>.
@@ -38,7 +48,11 @@ define("REALTYNA_JWT_SECRET", "YOUR RANDOM SECRET TOKEN")
 	define('REALTYNA_JWT_SECRET', $hash);
 }
 
-
+try {
+	require_once 'aaa.php';
+}catch (Exception $e){
+	dd($e);
+}
 if(!class_exists('Realtyna\MvcCore\StartUp')){
 	add_action('admin_notices', function (){
 		echo  '<div class="notice notice-error">';
