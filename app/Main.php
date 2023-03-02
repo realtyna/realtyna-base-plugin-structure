@@ -34,7 +34,14 @@ class Main extends StartUp
         $this->addSetting(Setting::class);
     }
 
-	public function requirements(): bool
+    public function listeners(): array
+    {
+        return [
+
+        ];
+    }
+
+    public function requirements(): bool
 	{
 		$valid = true;
 		if ( !is_plugin_active( 'realtyna-API/plugin.php' ) ) {
