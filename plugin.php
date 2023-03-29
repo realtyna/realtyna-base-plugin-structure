@@ -48,11 +48,6 @@ define("REALTYNA_JWT_SECRET", "YOUR RANDOM SECRET TOKEN")
 	define('REALTYNA_JWT_SECRET', $hash);
 }
 
-try {
-	require_once 'aaa.php';
-}catch (Exception $e){
-	dd($e);
-}
 if(!class_exists('Realtyna\MvcCore\StartUp')){
 	add_action('admin_notices', function (){
 		echo  '<div class="notice notice-error">';
